@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FireStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/Test.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-storage.js"></script>
+</head>
+
+<body>
+        <h1>Cloud Cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type="text" id="name" name="name" placeholder="Cafe name">
+                <input type="text" id="city" name="city" placeholder="Cafe city">
+                <label for="image">Cafe Image</label>
+                <input type="file" name="Choose Image" id="image" placeholder="Cafe image">
+                <button>Add Cafe</button>
+            </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBFiZlfCkbNOzwD8p_pUmemDGnS9ElJS8k",
+            authDomain: "cafenearyou.firebaseapp.com",
+            databaseURL: "https://cafenearyou.firebaseio.com",
+            projectId: "cafenearyou",
+            storageBucket: "cafenearyou.appspot.com",
+            messagingSenderId: "806657519591",
+            appId: "1:806657519591:web:00dd79371ae047a6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const store = firebase.storage();
+    </script>
+    <script src="../JS/Test.js"></script>
+</body>
+
+</html>
